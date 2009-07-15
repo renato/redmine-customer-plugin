@@ -8,6 +8,7 @@ label_customer_view: View
 label_customer_assign: Assign
 label_customer_list: List
 label_customer_new: New
+field_customer: Customer
 field_customer_name: Name
 field_customer_company: Company
 field_customer_address: Address

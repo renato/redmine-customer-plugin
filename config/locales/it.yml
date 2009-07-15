@@ -9,6 +9,7 @@ it:
   label_customer_assign: Assegna
   label_customer_list: Elenco clienti
   label_customer_new: Nuovo cliente
+  field_customer: Cliente
   field_customer_name: Nominativo
   field_customer_company: Azienda
   field_customer_address: Indirizzo

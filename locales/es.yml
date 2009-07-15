@@ -9,6 +9,7 @@ es:
   label_customer_assign: Asignar
   label_customer_list: Listar
   label_customer_new: Nuevo
+  field_customer: Cliente
   field_customer_name: Nombre
   field_customer_company: Empresa
   field_customer_address: Direccion

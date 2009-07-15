@@ -9,6 +9,7 @@ ca:
   label_customer_assign: Assigna
   label_customer_list: Llista
   label_customer_new: Nou
+  field_customer: Client
   field_customer_name: Nom
   field_customer_company: Empresa
   field_customer_address: Addre&ccedil;a

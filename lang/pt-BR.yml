@@ -8,6 +8,7 @@ label_customer_view: Ver
 label_customer_assign: Atribuir
 label_customer_list: Lista
 label_customer_new: Novo
+field_customer: Cliente
 field_customer_name: Nome
 field_customer_company: Empresa
 field_customer_address: Endereço
