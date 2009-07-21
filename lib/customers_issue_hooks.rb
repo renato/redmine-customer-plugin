@@ -12,7 +12,7 @@ class IssueCustomerHooks < Redmine::Hook::ViewListener
       
       name = html_escape context[:issue].customer.name unless context[:issue].customer.nil?
       
-      link = link_to name, {:controller => 'customers', :action => 'show', :id => context[:project], :customer_id => context[:issue].customer.id}
+      link = link_to name, {:controller => 'customers', :action => 'show', :id => context[:project], :customer_id => context[:issue].customer.id} unless context[:issue].customer.nil?
 
       data += link unless link.blank?
       data += "</td>"
