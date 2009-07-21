@@ -2,11 +2,10 @@ class CustomersController < ApplicationController
   unloadable
   layout 'base'
   before_filter :find_project, :authorize
-  before_filter :find_customer, :only => [:edit, :update, :destroy]
+  before_filter :find_customer, :only => [:show, :edit, :update, :destroy]
   before_filter :find_customers, :only => [:list, :select]
  
   def show
-    @customer = Customer.find_by_id(@project.customer_id)
   end
   
   def list
