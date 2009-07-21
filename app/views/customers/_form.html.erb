@@ -23,10 +23,13 @@
     <%= f.text_field 'skype_name', :label=>l(:field_customer_skype) -%>
   </p>
   <p>
-    <%= f.select :software_id, Software.find(:all).collect {|s| [s.name, s.id]}, :label=>l(:field_customer_software) %>
+    <%= f.select :software_id, Software.find(:all, :order => 'name ASC').collect {|s| [s.name, s.id]}, :label=>l(:field_customer_software) %>
   </p>
   <p>
     <%= f.text_field 'software_version', :label=>l(:field_customer_software_version) -%>
+  </p>
+  <p>
+    <%= f.select :printer_id, Printer.find(:all, :order => 'name ASC').collect {|s| [s.name, s.id]}, :label=>l(:field_customer_printer) %>
   </p>
   <p>
     <%= f.text_field 'contact_name', :label=>l(:field_customer_contact_name) -%>
