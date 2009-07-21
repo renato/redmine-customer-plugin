@@ -18,6 +18,12 @@
     <p> <%= l(:field_customer_website) %>: <%= link_to @customer.website unless @customer.website.blank? %> </p>
     <p> <%= l(:field_customer_skype) %>: <%= @customer.skype_name unless @customer.skype_name.blank? %> </p>
     <p> <%= l(:field_customer_notes) %>: <%= h @customer.notes %> </p>
+    <p> <%= l(:field_customer_software) %>: <%= h @customer.software %> </p>
+    <p> <%= l(:field_customer_software_version) %>: <%= h @customer.software_version %> </p>
+    <p> <%= l(:field_customer_contact_name) %>: <%= h @customer.contact_name %> </p>
+    <p> <%= l(:field_customer_contact_phone) %>: <%= h @customer.contact_phone %> </p>
+    <p> <%= l(:field_customer_printer) %>: <%= h @customer.printer %> </p>
+    <p> <%= l(:field_customer_blocked) %>: <%= h @customer.blocked %> </p>
   </div>
 <% else %>
   <p class="nodata"><%=l(:label_no_data)%></p>

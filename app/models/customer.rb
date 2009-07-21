@@ -1,5 +1,7 @@
 class Customer < ActiveRecord::Base
   has_many :projects
+  belongs_to :software
+  belongs_to :printer
   
   # name or company is mandatory
   validates_presence_of :name, :if => :company_unsetted

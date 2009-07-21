@@ -18,6 +18,12 @@ pt-BR:
   field_customer_website: Site
   field_customer_skype: Skype
   field_customer_notes: Observações
+  field_customer_software: Sistema
+  field_customer_software_version: Versão
+  field_customer_contact_name: Nome do Contato
+  field_customer_contact_phone: Telefone do Contato
+  field_customer_printer: Impressora
+  field_customer_blocked: Bloqueado
   notice_successful_save: Salvo com sucesso
   notice_unsuccessful_save: Não foi possível salvar
   project_module_customer_module: Cliente
