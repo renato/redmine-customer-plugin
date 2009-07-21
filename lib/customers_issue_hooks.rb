@@ -8,7 +8,15 @@ class IssueCustomerHooks < Redmine::Hook::ViewListener
     if context[:project].module_enabled?('customer_module')
       data = "<td><b>"
       data += l(:field_customer)
-      data += ":</b></td><td>#{html_escape context[:issue].customer.name unless context[:issue].customer.nil?}</td>"
+      data += ":</b></td><td>"
+      
+      name = html_escape context[:issue].customer.name unless context[:issue].customer.nil?
+      
+      link = link_to name, {:controller => 'customers', :action => 'show', :id => context[:project], :customer_id => context[:issue].customer.id}
+
+      data += link unless link.blank?
+      data += "</td>"
+
       return "<tr>#{data}<td></td></tr>"
     else
       return ''
