@@ -23,7 +23,7 @@ class IssueCustomerHooks < Redmine::Hook::ViewListener
   #
   def view_issues_form_details_bottom(context = { })
     if context[:project].module_enabled?('customer_module')
-      select = context[:form].select :customer_id, Customer.find(:all).collect { |d| [d.name, d.id] }, :include_blank => true 
+      select = context[:form].select :customer_id, Customer.find(:all, :order => 'name ASC').collect { |d| [d.name, d.id] }, :include_blank => true 
       return "<p>#{select}</p>"
     else
       return ''
@@ -40,7 +40,7 @@ class IssueCustomerHooks < Redmine::Hook::ViewListener
       select = select_tag('customer_id',
                                content_tag('option', l(:label_no_change_option), :value => '') +
                                content_tag('option', l(:label_none), :value => 'none') +
-                               options_from_collection_for_select(Customer.find(:all), :id, :name))
+                               options_from_collection_for_select(Customer.find(:all, :order => 'name ASC'), :id, :name))
     
       return content_tag(:p, "<label>#{l(:field_customer)}: " + select + "</label>")
     else
