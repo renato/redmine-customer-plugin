@@ -80,7 +80,7 @@ class CustomersController < ApplicationController
   end
   
   def find_customers
-    @customers = Customer.find(:all, :sort => 'name ASC') || []
+    @customers = Customer.find(:all, :order => 'name ASC') || []
   end
 
 end
