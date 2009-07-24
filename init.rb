@@ -22,5 +22,5 @@ Redmine::Plugin.register :customer_plugin do
     permission :edit_customer, {:customers => [:edit, :update, :new, :create, :destroy]}
   end
 
-  menu :project_menu, :customers, {:controller => 'customers', :action => 'show'}, :caption => :customer_title
+  menu :project_menu, :customers, {:controller => 'customers', :action => 'list'}, :caption => :customer_title
 end
