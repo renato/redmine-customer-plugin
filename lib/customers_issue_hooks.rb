@@ -31,7 +31,9 @@ class IssueCustomerHooks < Redmine::Hook::ViewListener
   #
   def view_issues_form_details_bottom(context = { })
     if context[:project].module_enabled?('customer_module')
-      select = context[:form].select :customer_id, Customer.find(:all, :order => 'name ASC').collect { |d| [d.name, d.id] }, :include_blank => true 
+      select = context[:form].select :customer_id, Customer.find(:all, :order => 'name ASC').collect { |d| [d.name + (d.blocked? ? " (bloqueado)" : ""), d.id] }, :include_blank => true 
+      js = "window.open(document.getElementById('issue_customer_id').value ? '/customers/edit/suporte?customer_id=' + document.getElementById('issue_customer_id').value : '/customers/new/suporte', '_blank')"
+      select += "<a href=\"javascript:\" onClick=\"#{js}; return false;\">Editar</a>"
       return "<p>#{select}</p>"
     else
       return ''
