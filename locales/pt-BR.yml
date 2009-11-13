@@ -10,8 +10,8 @@ pt-BR:
   label_customer_list: Lista
   label_customer_new: Novo
   field_customer: Cliente
-  field_customer_name: Nome
-  field_customer_company: Empresa
+  field_customer_name: Nome Fantasia
+  field_customer_company: Razão Social
   field_customer_address: Endereço
   field_customer_phone: Telefone
   field_customer_email: E-mail

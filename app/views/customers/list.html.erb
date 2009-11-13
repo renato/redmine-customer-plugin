@@ -9,7 +9,10 @@
   <table class="list">
     <% @customers.each do |customer| %>
       <tr class="<%= cycle('odd', 'even') %>">
-        <td><%= customer.pretty_name %></td>
+        <td>
+          <%= link_to_if_authorized customer.pretty_name, {:controller => 'customers', :action => 'edit', :id => @project, :customer_id => customer.id }, :style => customer.blocked? ? "color: red;" : "" %>
+        </td>
+        <td><%= customer.phone %></td>
         <td align="right">
           <small>
               <%= link_to_if_authorized l(:label_customer_view), {:controller => 'customers', :action => 'show', :id => @project, :customer_id => customer.id}, :class => 'icon icon-user' %>
